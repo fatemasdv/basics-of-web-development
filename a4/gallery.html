@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Assignment: A4 - Layout Design & Clickable Gallery
+    Author: Centria UAS Student
+    Modified by: Fatema Akter
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website | Photo Gallery - A4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-title">Fatema's Web</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html" class="active">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <h1>Photo Gallery</h1>
+      <p class="subtitle">A responsive collection of original photographs. Click any image to view it full size in its original resolution.</p>
+    </section>
+
+    <!-- Responsive CSS Grid Layout -->
+    <div class="gallery-grid">
+      
+      <!-- Card 1: Clickable Image 1 -->
+      <div class="card">
+        <h2>Sunny Lake Shore</h2>
+        <p>A peaceful lakeside view with shimmering water under clear skies. Click the photo to open full size.</p>
+        <a href="images/lake-view.jpg" target="_blank" class="image-link" title="Click to view full size">
+          <img src="images/lake-view.jpg" alt="A sunny lake shore view with trees and water reflections">
+        </a>
+      </div>
+
+      <!-- Card 2: Clickable Image 2 -->
+      <div class="card">
+        <h2>Historic River Building</h2>
+        <p>Historic red brick industrial architecture alongside the flowing river water. Click the photo to open full size.</p>
+        <a href="images/river-building.jpg" target="_blank" class="image-link" title="Click to view full size">
+          <img src="images/river-building.jpg" alt="Red brick industrial building next to a river">
+        </a>
+      </div>
+
+      <!-- Card 3: Clickable Image 3 -->
+      <div class="card">
+        <h2>Golden Sunset Street</h2>
+        <p>Warm late-afternoon sunlight casting long shadows along a quiet street. Click the photo to open full size.</p>
+        <a href="images/street-sunlight.jpg" target="_blank" class="image-link" title="Click to view full size">
+          <img src="images/street-sunlight.jpg" alt="Street scene illuminated by golden sunset light">
+        </a>
+      </div>
+
+    </div>
+
+    <section class="back-home">
+      <p>Explore more about my background and projects:</p>
+      <a href="index.html" class="button-link">&larr; Return to Home Page</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Fatema Akter | Basics of Web Development A4</p>
+  </footer>
+
+</body>
+</html>
