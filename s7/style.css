@@ -1,0 +1,251 @@
+/*
+  Assignment: S7 - Stylesheet with Form Styling & Navigation
+  Author: Centria UAS / Veijo Heikkiniemi
+  Modified by: Fatema Akter
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333333;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  padding: 1rem 2rem;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-centria {
+  color: #000000;
+}
+
+.logo-edu {
+  color: #e63946;
+}
+
+/* 1. Navigation Menu: Normal weight by default, BOLD for active page */
+nav a {
+  text-decoration: none;
+  color: #495057;
+  margin-left: 1.5rem;
+  font-weight: normal;
+  transition: color 0.2s ease;
+}
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+  color: #e63946;
+  border-bottom: 2px solid #e63946;
+  padding-bottom: 0.2rem;
+}
+
+nav a:hover {
+  color: #e63946;
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.hero {
+  margin-bottom: 2.5rem;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #e63946;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #111111;
+  margin: 0.5rem 0;
+}
+
+.subtitle {
+  color: #6c757d;
+  max-width: 650px;
+  margin-bottom: 1rem;
+}
+
+.card-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #ffffff;
+  flex: 1 1 calc(33.333% - 1.5rem);
+  min-width: 280px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: #111111;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  color: #495057;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+/* Gallery image styles */
+.card-bg {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url('images/lake-view.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 320px;
+}
+
+.grayscale-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: grayscale(100%);
+  margin-top: auto;
+  border: 1px solid #dee2e6;
+}
+
+.clickable-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+}
+
+/* ========================================================
+   S7 FORM STYLING
+   ======================================================== */
+.form-card {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label,
+.radio-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #2b2d42;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #333333;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e63946;
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.15);
+}
+
+.radio-options {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.submit-btn {
+  display: inline-block;
+  background-color: #e63946;
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #d62828;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  border-top: 1px solid #e9ecef;
+}
