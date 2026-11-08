@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Assignment: S7 - Gallery Subpage
+    Author: Centria UAS / Veijo Heikkiniemi
+    Modified by: Fatema Akter
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basics of Web Development - S7 Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-centria">centria</span> <span class="logo-edu">edu</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Topics</a>
+        <a href="#">About</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <p class="tagline">BASICS OF WEB DEVELOPMENT</p>
+      <h1>Gallery</h1>
+      <p class="subtitle">Exploring responsive gallery cards with original photographs.</p>
+    </div>
+
+    <div class="card-grid">
+      <div class="card card-bg">
+        <h2>Sunny Lake Shore</h2>
+        <p>A tranquil view of the lake shoreline under sunny skies with clear water reflections, displayed as a faded background image.</p>
+      </div>
+
+      <div class="card">
+        <h2>Industrial River &amp; Buildings</h2>
+        <p>Historic red brick architecture along the flowing river, displayed in black-and-white using a CSS grayscale filter.</p>
+        <img src="images/river-building.jpg" alt="Red brick industrial building next to a river" class="grayscale-image">
+      </div>
+
+      <div class="card">
+        <h2>Golden Hour Street View</h2>
+        <p>Warm sunlight casting long shadows along a quiet street. Click the photo to open the original full-size image.</p>
+        <a href="images/street-sunlight.jpg" target="_blank">
+          <img src="images/street-sunlight.jpg" alt="Street scene illuminated by golden sunset light" class="clickable-image">
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Centria UAS | Modified by Fatema Akter</p>
+  </footer>
+</body>
+</html>
