@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Assignment: S8 - Contact Form with Built-in Browser Validation
+    Author: Centria UAS / Veijo Heikkiniemi
+    Modified by: Fatema Akter
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basics of Web Development - Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-centria">centria</span> <span class="logo-edu">edu</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Topics</a>
+        <a href="#">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="topics" id="contact">
+      <div class="hero">
+        <p class="tagline">GET IN TOUCH</p>
+        <h1>Contact us</h1>
+        <p class="subtitle">Please fill out the form below. Required fields and format restrictions are marked clearly.</p>
+      </div>
+
+      <!-- Contact Form with built-in validation -->
+      <form class="card form-card" action="https://httpbin.org/post" method="post">
+        
+        <!-- 1. Name: Required, 2-80 characters -->
+        <div class="form-group">
+          <label for="name">Name (required, 2–80 characters)</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            autocomplete="name" 
+            required 
+            minlength="2" 
+            maxlength="80" 
+            placeholder="Your full name (min 2 chars)"
+          >
+        </div>
+
+        <!-- 2. Email: Required, email format, max 120 characters -->
+        <div class="form-group">
+          <label for="email">Email address (required, max 120 characters)</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            autocomplete="email" 
+            required 
+            maxlength="120" 
+            placeholder="name@example.com"
+          >
+        </div>
+
+        <!-- 3. Phone: Optional, 7-15 digits, optional leading + -->
+        <div class="form-group">
+          <label for="phone">Phone number (optional)</label>
+          <p id="phone-help" class="help-text">
+            Enter 7–15 digits, optionally starting with +. Do not use spaces or hyphens. Example: +358401234567.
+          </p>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            autocomplete="tel" 
+            pattern="[+]?[0-9]{7,15}" 
+            aria-describedby="phone-help" 
+            placeholder="+358401234567"
+          >
+        </div>
+
+        <!-- 4. Subject: Required, choose actual option -->
+        <div class="form-group">
+          <label for="subject">Subject (required)</label>
+          <select id="subject" name="subject" required>
+            <option value="">Choose a subject</option>
+            <option value="feedback">Feedback</option>
+            <option value="question">Question</option>
+            <option value="collaboration">Collaboration</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- 5. Preferred contact method: Required radio group inside fieldset -->
+        <div class="form-group">
+          <fieldset class="radio-fieldset">
+            <legend>Preferred contact method (required)</legend>
+            <div class="radio-options">
+              <label class="radio-label" for="contact-email">
+                <input type="radio" id="contact-email" name="contact_method" value="email" required>
+                Email
+              </label>
+              <label class="radio-label" for="contact-phone">
+                <input type="radio" id="contact-phone" name="contact_method" value="phone" required>
+                Phone
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- 6. Message: Required, 20-1000 characters -->
+        <div class="form-group">
+          <label for="message">Message (required, 20–1,000 characters)</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="5" 
+            required 
+            minlength="20" 
+            maxlength="1000" 
+            placeholder="Write at least 20 characters here..."
+          ></textarea>
+        </div>
+
+        <!-- 7. Submit button -->
+        <div class="form-group">
+          <button type="submit" class="submit-btn">Send Message</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Centria UAS | Modified by Fatema Akter</p>
+  </footer>
+</body>
+</html>
