@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Assignment: A5 - Registration Form
+    Author: Centria UAS Student
+    Modified by: Fatema Akter
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website | Register - A5</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-title">Fatema's Web</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="register.html" aria-current="page">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <h1>Create an Account</h1>
+      <p class="subtitle">Join our creative photography and web development community. Please complete all required fields below.</p>
+    </section>
+
+    <!-- Registration Form styled as card submitting to httpbin via POST -->
+    <form class="card form-card" action="https://httpbin.org/post" method="post">
+      
+      <!-- 1. Name: input type="text", Required -->
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          autocomplete="name" 
+          required 
+          placeholder="Enter your full name"
+        >
+      </div>
+
+      <!-- 2. Email address: input type="email", Required -->
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          autocomplete="email" 
+          required 
+          placeholder="name@example.com"
+        >
+      </div>
+
+      <!-- 3. Username: input type="text", Required, min 3 chars -->
+      <div class="form-group">
+        <label for="username">Username * (min. 3 characters)</label>
+        <input 
+          type="text" 
+          id="username" 
+          name="username" 
+          autocomplete="username" 
+          required 
+          minlength="3" 
+          placeholder="Choose a username"
+        >
+      </div>
+
+      <!-- 4. Password: input type="password", Required, min 8 chars -->
+      <div class="form-group">
+        <label for="password">Password * (min. 8 characters)</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          autocomplete="new-password" 
+          required 
+          minlength="8" 
+          placeholder="At least 8 characters"
+        >
+      </div>
+
+      <!-- 5. User type: select, Required, at least three options -->
+      <div class="form-group">
+        <label for="user_type">User Type *</label>
+        <select id="user_type" name="user_type" required>
+          <option value="">Choose your user profile</option>
+          <option value="enthusiast">Photography Enthusiast</option>
+          <option value="student">Web Development Student</option>
+          <option value="creator">Content Creator</option>
+        </select>
+      </div>
+
+      <!-- 6. Accept Terms of Use: input type="checkbox", Required, not pre-selected -->
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms" class="checkbox-label">
+          I accept the website <a href="#terms-modal">Terms of Use</a> and Privacy Policy *
+        </label>
+      </div>
+
+      <!-- Brief Terms Description -->
+      <div class="terms-box" id="terms-modal">
+        <p><strong>Terms of Use:</strong> By registering, you agree to respect copyright laws for all shared photography, engage politely in comments, and maintain account security.</p>
+      </div>
+
+      <!-- Submit Button: Register -->
+      <div class="form-group">
+        <button type="submit" class="submit-btn">Register</button>
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Fatema Akter | Basics of Web Development A5</p>
+  </footer>
+
+</body>
+</html>
